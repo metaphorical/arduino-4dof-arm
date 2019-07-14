@@ -22,15 +22,15 @@ void setup() {
 
 // Left motor
 //  motor2.attach (8);
-//  motor2.write(motor2_position);s
+//  motor2.write(motor2_position);
 
 //Right motor
-//  motor3.attach (7);
-//  motor3.write(motor3_position);
+  motor3.attach (7);
+  motor3.write(motor3_position);
 
 //Hand motor
   motor4.attach (6);
-  motor4.write(60);
+  motor4.write(80);
 //
 //  delay(500);
 //
