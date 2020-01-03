@@ -1,4 +1,6 @@
 #include <Servo.h>
+#define ledPin 11
+int bluetooth_state = 0;
 
 Servo motor1, motor2, motor3, motor4;
 
@@ -16,6 +18,7 @@ int servo_position = 75;
 
 // Arm in about the right angle is 2=170 3=110
 // Looking straight fwd is 1=100
+
 
 void setup() {
 
@@ -49,6 +52,12 @@ void setup() {
 //
 //  motor4.write(90);
 
+//Direct output to status led
+ pinMode(ledPin, OUTPUT);
+ digitalWrite(ledPin, LOW);
+ //bt setup
+ Serial.begin(38400);
+
 }
 
 void loop() {
@@ -63,4 +72,23 @@ void loop() {
 //    motor4.write(servo_position);
 //    delay(10);
 //  }
+
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+
+  if(Serial.available() > 0){ // Checks whether data is comming from the serial port
+    bluetooth_state = Serial.read(); // Reads the data from the serial port
+ }
+ if (bluetooth_state == '0') {
+  digitalWrite(ledPin, LOW); // Turn LED OFF
+  Serial.println("LED: OFF"); // Send back, to the phone, the String "LED: ON"
+  bluetooth_state = 0;
+ }
+ else if (bluetooth_state == '1') {
+  digitalWrite(ledPin, HIGH);
+  Serial.println("LED: ON");;
+  bluetooth_state = 0;
+ }
 }
