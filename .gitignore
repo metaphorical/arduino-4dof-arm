@@ -1,7 +1,6 @@
 .vscode
 out/
 .idea/
-android/
 .bin/
 package-lock.json
 yarn.lock
