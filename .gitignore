@@ -4,3 +4,4 @@ out/
 .bin/
 package-lock.json
 yarn.lock
+node_modules/

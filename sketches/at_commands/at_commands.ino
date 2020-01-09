@@ -10,17 +10,17 @@ void setup() {
   Serial.begin(9600);
 //
 //    sendCommand("AT");
-  sendCommand("AT+ROLE0");
-  sendCommand("AT+TYPE2");
-  sendCommand("AT+MODE2");
-  sendCommand("AT+UUID0xFFE0");
-  sendCommand("AT+CHAR0xFFE1");
-  sendCommand("AT+PIN0000");
-  sendCommand("AT+NAMEroboarm");
+//  sendCommand("AT+ROLE0");
+//  sendCommand("AT+TYPE2");
+//  sendCommand("AT+MODE2");
+//  sendCommand("AT+UUID0xFFE0");
+//  sendCommand("AT+CHAR0xFFE1");
+//  sendCommand("AT+PIN0000");
+//  sendCommand("AT+NAMEroboarm");
 
 //  
-//    sendCommand("AT+RESET");
-//    sendCommand("AT+DEFAULT");
+    sendCommand("AT+RESET");
+    sendCommand("AT+DEFAULT");
 
     
 //    sendCommand("AT+VERSION");

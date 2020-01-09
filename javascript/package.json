@@ -1,0 +1,15 @@
+{
+  "name": "arduino-arm",
+  "version": "1.0.0",
+  "description": "using johnny-five to control arm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rastko",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^1.4.0",
+    "serialport": "^8.0.6"
+  }
+}
